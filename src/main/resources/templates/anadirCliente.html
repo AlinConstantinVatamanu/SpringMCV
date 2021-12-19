@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>AÑADIR CLIENTE</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+		<body class="card-body">
+		<div class="card text-white bg-dark mb-3">
+		  <div class="card-header">Añadir un nuevo cliente:</div>
+		  <div class="card-body">
+				<form action="#" th:action="@{/anadirCliente}" th:object="${newCustomer}" method="post">
+					<div class="form-group">
+			  			<label for="inpName">Nombre</label>
+			  			<input type="text" th:field="*{name}">
+					</div>
+					<div class="form-group">
+						  <label for="inpSurname1">Primer apellido</label>
+						  <input type="text" th:field="*{surName1}">
+					</div>
+					<div class="form-group">
+						  <label for="inpSurname2">Segundo apellido</label>
+						  <input type="text" th:field="*{surName2}">
+					</div>
+					<div class="form-group">
+						  <label for="inpDni">DNI</label>
+						  <input type="text" th:field="*{dni}">
+					</div>
+					<button type="submit" name="btnAddCustomer" class="btn btn-success">Añadir cliente</button>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>

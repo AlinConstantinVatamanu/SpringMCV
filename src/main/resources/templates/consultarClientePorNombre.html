@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Consultar cliente</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body class="card-body">
+		<div class="card text-white bg-dark mb-3">
+		  <div class="card-header">Buscar cliente por nombre:</div>
+		  <div class="card-body">
+				<form  th:action="@{./consultarCliente}" th:object="${customer}" method="POST">
+					<div class="form-group">
+			  			<label for="inpName">Nombre</label>
+			  			<input type="text" name="name" th:field="*{name}" >
+					</div>
+					<button type="submit" name="btnConsultar" class="btn btn-success">Consultar</button>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>
